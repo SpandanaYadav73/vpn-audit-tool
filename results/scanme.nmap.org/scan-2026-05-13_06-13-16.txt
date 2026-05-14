@@ -1,0 +1,1 @@
+# Nmap 7.94SVN scan initiated Wed May 13 06:13:16 2026 as: nmap -sV -oN results/scanme.nmap.org/scan-2026-05-13_06-13-16.txt scanme.nmap.org

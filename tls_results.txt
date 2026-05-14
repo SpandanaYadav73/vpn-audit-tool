@@ -1,0 +1,303 @@
+[1m
+#####################################################################[m
+  [1mtestssl.sh[m version [1m3.3dev[m from [1mhttps://testssl.sh/dev/[m
+  [1m([m[0;37m0e59b983 2026-04-22 15:34:21[m[1m)[m
+[1m
+  This program is free software. Distribution and modification under
+  GPLv2 permitted. USAGE w/o ANY WARRANTY. USE IT AT YOUR OWN RISK![m
+
+  Please file bugs @ [1mhttps://testssl.sh/bugs/[m
+[1m#####################################################################[m
+
+  Using [3mOpenSSL 1.0.2-bad (Mar 28 2025)[m  [~179 ciphers]
+  on LENOVO:./bin/openssl.Linux.x86_64
+
+[1mTesting all IPv4 addresses (port 443): [m20.207.73.82
+--------------------------------------------------------------------------------------------------------
+[7m Start 2026-05-13 06:06:18        -->> 20.207.73.82:443 (github.com) <<--[m
+
+ Further IP addresses:   (64:ff9b::14cf:4952) 
+ rDNS (20.207.73.82):    --
+ Service detected:       HTTP
+
+[1m[4m Testing protocols [m[4mvia sockets except NPN+ALPN [m
+
+[1m SSLv2      [m[1;32mnot offered (OK)[m
+[1m SSLv3      [m[1;32mnot offered (OK)[m
+[1m TLS 1      [mnot offered
+[1m TLS 1.1    [mnot offered
+[1m TLS 1.2    [m[1;32moffered (OK)[m
+[1m TLS 1.3    [m[1;32moffered (OK)[m: final
+[1m QUIC       [m[0;35mLocal problem: No OpenSSL QUIC support[m
+[1m NPN/SPDY   [mnot offered
+[1m ALPN/HTTP2 [m[0;32mh2[m, http/1.1 (offered)
+
+[1m[4m Testing cipher categories [m
+
+[1m NULL ciphers (no encryption)                      [m[1;32mnot offered (OK)[m
+[1m Anonymous NULL Ciphers (no authentication)        [m[1;32mnot offered (OK)[m
+[1m Export ciphers (w/o ADH+NULL)                     [m[1;32mnot offered (OK)[m
+[1m LOW: 64 Bit + DES, RC[2,4], MD5 (w/o export)      [m[0;32mnot offered (OK)[m
+[1m Triple DES Ciphers / IDEA                         [mnot offered
+[1m Obsoleted CBC ciphers (AES, ARIA etc.)            [m[1;33moffered[m
+[1m Strong encryption (AEAD ciphers) with no FS       [m[0;32moffered (OK)[m
+[1m Forward Secrecy strong encryption (AEAD ciphers)  [m[1;32moffered (OK)[m
+
+
+[1m[4m Testing server's cipher preferences [m
+
+Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
+-----------------------------------------------------------------------------------------------------------------------------
+[4mSSLv2[m
+ - 
+[4mSSLv3[m
+ - 
+[4mTLSv1[m
+ - 
+[4mTLSv1.1[m
+ - 
+[4mTLSv1.2[m (server order -- server prioritizes ChaCha ciphers when preferred by clients)
+ xc02b   ECDHE-ECDSA-AES128-GCM-SHA256     ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256            
+ xcca9   ECDHE-ECDSA-CHACHA20-POLY1305     ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256      
+ xc02c   ECDHE-ECDSA-AES256-GCM-SHA384     ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384            
+ xc023   ECDHE-ECDSA-AES128-SHA256         ECDH[0;32m 253[m   AES         128      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256            
+ xc024   ECDHE-ECDSA-AES256-SHA384         ECDH[0;32m 253[m   AES         256      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384            
+ xc00a   ECDHE-ECDSA-AES256-SHA            ECDH[0;32m 253[m   AES         256      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA               
+ xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH[0;32m 253[m   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256              
+ xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH[0;32m 253[m   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256        
+ xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH[0;32m 253[m   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384              
+ xc027   ECDHE-RSA-AES128-SHA256           ECDH[0;32m 253[m   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256              
+ xc028   ECDHE-RSA-AES256-SHA384           ECDH[0;32m 253[m   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384              
+ xc014   ECDHE-RSA-AES256-SHA              ECDH[0;32m 253[m   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                 
+ x9c     AES128-GCM-SHA256                 RSA        AESGCM      128      TLS_RSA_WITH_AES_128_GCM_SHA256                    
+ x9d     AES256-GCM-SHA384                 RSA        AESGCM      256      TLS_RSA_WITH_AES_256_GCM_SHA384                    
+ x3c     AES128-SHA256                     RSA        AES         128      TLS_RSA_WITH_AES_128_CBC_SHA256                    
+ x3d     AES256-SHA256                     RSA        AES         256      TLS_RSA_WITH_AES_256_CBC_SHA256                    
+ x2f     AES128-SHA                        RSA        AES         128      TLS_RSA_WITH_AES_128_CBC_SHA                       
+ x35     AES256-SHA                        RSA        AES         256      TLS_RSA_WITH_AES_256_CBC_SHA                       
+[4mTLSv1.3[m (server order -- server prioritizes ChaCha ciphers when preferred by clients)
+ x1301   TLS_AES_128_GCM_SHA256            ECDH[0;32m 253[m   AESGCM      128      TLS_AES_128_GCM_SHA256                             
+ x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH[0;32m 253[m   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
+ x1302   TLS_AES_256_GCM_SHA384            ECDH[0;32m 253[m   AESGCM      256      TLS_AES_256_GCM_SHA384                             
+
+[1m Has server cipher order?     [m[1;32myes (OK)[m -- TLS 1.3 and below
+
+
+[1m[4m Testing robust forward secrecy (FS)[m[4m -- omitting Null Authentication/Encryption, 3DES, RC4 [m
+
+[0;32m FS is offered (OK) [m          TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES256-GCM-SHA384
+                              ECDHE-RSA-AES256-SHA384 ECDHE-ECDSA-AES256-SHA384 ECDHE-RSA-AES256-SHA ECDHE-ECDSA-AES256-SHA ECDHE-ECDSA-CHACHA20-POLY1305
+                              ECDHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES128-GCM-SHA256
+                              ECDHE-RSA-AES128-SHA256 ECDHE-ECDSA-AES128-SHA256 
+[1m KEMs offered                 [m[1;33mNone[m
+[1m Elliptic curves offered:     [m[0;32mprime256v1[m [0;32mX25519[m 
+[1m TLS 1.2 sig_algs offered:    [mRSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512 RSA+SHA256 RSA+SHA384 RSA+SHA512 RSA+SHA224 ECDSA+SHA256 
+                              ECDSA+SHA384 ECDSA+SHA512 ECDSA+SHA224 
+[1m TLS 1.3 sig_algs offered:    [mECDSA+SHA256 
+
+[1m[4m Testing server defaults (Server Hello) [m
+
+[1m TLS extensions               [m"server name/#0" "max fragment length/#1" "supported_groups/#10" "EC point formats/#11" "application layer protocol negotiation/#16" "encrypt-then-mac/#22" "extended master secret/#23" "supported versions/#43" "key share/#51" "renegotiation info/#65281"
+[1m Session Ticket RFC 5077 hint [mno -- no lifetime advertised
+[1m SSL Session ID support       [mno
+[1m Session Resumption           [mtickets no, ID: no
+[1m TLS 1.3 early data support   [m[0;32mno early data[m (no SSL session ID)
+[1m TLS clock skew[m               Random values, no fingerprinting possible 
+[1m Certificate Compression      [mnone
+[1m Client Authentication        [mnone
+
+  [1m[4mServer Certificate #1[m
+  [1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+  [1m Server key size              [mRSA [0;32m4096[m bits (exponent is 65537)
+  [1m Server key usage             [mDigital Signature, Key Encipherment
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial                       [m1B03844FA08BB7D8E855DA0830CE8B16 (OK: length 16)
+  [1m Fingerprints                 [mSHA1 B0E83FD582156F85EFB9756D20AB58EA045BC664
+                                SHA256 728D2D3ADF47AF04D618483A89BB22DB0EF3C0FAF53E976BDF60FBB36CB6D3F1
+  [1m Common Name (CN)             [m[3mgithub.com [m
+  [1m subjectAltName (SAN)         [m[3mgithub.com www.github.com [m
+  [1m Trust (hostname)             [m[0;32mOk via SAN and CN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m Certificate Validity (UTC)   [m[0;33mexpires < 60 days (54)[m (2026-04-08 00:00 --> 2026-07-06 23:59)
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Revocation List  [m--
+  [1m OCSP URI                     [mhttp://ocsp.sectigo.com
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" below
+                                [3missue=digicert.com, issue=globalsign.com, issue=letsencrypt.org, issue=sectigo.com, issuewild=digicert.com,
+                                issuewild=letsencrypt.org, issuewild=sectigo.com[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+  [1m Certificates provided[m        3
+  [1m Issuer                       [m[3mSectigo Public Server Authentication CA DV R36[m ([3mSectigo Limited[m from [3mGB[m)
+  [1m Intermediate cert validity   [m#1: [0;32mok > 40 days[m (2036-03-21 23:59). [3mSectigo Public Server Authentication CA DV R36[m <-- [3mSectigo Public Server Authentication Root R46[m
+                                #2: [0;32mok > 40 days[m (2038-01-18 23:59). [3mSectigo Public Server Authentication Root R46[m <-- [3mUSERTrust RSA Certification Authority[m
+  [1m Intermediate Bad OCSP[m (exp.) [0;32mOk[m
+
+  [1m[4mServer Certificate #2[m
+  [1m Signature Algorithm          [m[0;32mECDSA with SHA256[m
+  [1m Server key size              [mEC [0;32m256[m bits (curve P-256)
+  [1m Server key usage             [mDigital Signature
+  [1m Server extended key usage    [mTLS Web Server Authentication
+  [1m Serial                       [mE7CECC3B13FB3B7B8A46EA8CD0AEB71C (OK: length 16)
+  [1m Fingerprints                 [mSHA1 AA4C839102940A2534960712D2738F3BF1A3B7C1
+                                SHA256 A7B81034CD439551C50A29B54355254A84942A0A990C1A9E12856C855B64B65F
+  [1m Common Name (CN)             [m[3mgithub.com [m
+  [1m subjectAltName (SAN)         [m[3mgithub.com www.github.com [m
+  [1m Trust (hostname)             [m[0;32mOk via SAN and CN[m (same w/o SNI)
+  [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
+  [1m EV cert[m (experimental)       no 
+  [1m Certificate Validity (UTC)   [m[0;32m81 >= 60 days[m (2026-05-05 00:00 --> 2026-08-02 23:59)
+  [1m ETS/"eTLS"[m, visibility info  not present
+  [1m Certificate Revocation List  [m--
+  [1m OCSP URI                     [mhttp://ocsp.sectigo.com
+  [1m OCSP stapling                [m[1;33mnot offered[m
+  [1m OCSP must staple extension   [m--
+  [1m DNS CAA RR[m (experimental)    [0;32mavailable[m - please check for match with "Issuer" below
+                                [3missue=digicert.com, issue=globalsign.com, issue=letsencrypt.org, issue=sectigo.com, issuewild=digicert.com,
+                                issuewild=letsencrypt.org, issuewild=sectigo.com[m
+  [1m Certificate Transparency     [m[0;32myes[m (certificate extension)
+  [1m Certificates provided[m        3
+  [1m Issuer                       [m[3mSectigo Public Server Authentication CA DV E36[m ([3mSectigo Limited[m from [3mGB[m)
+  [1m Intermediate cert validity   [m#1: [0;32mok > 40 days[m (2036-03-21 23:59). [3mSectigo Public Server Authentication CA DV E36[m <-- [3mSectigo Public Server Authentication Root E46[m
+                                #2: [0;32mok > 40 days[m (2038-01-18 23:59). [3mSectigo Public Server Authentication Root E46[m <-- [3mUSERTrust ECC Certification Authority[m
+  [1m Intermediate Bad OCSP[m (exp.) [0;32mOk[m
+
+
+[1m[4m Testing HTTP header response @ "/" [m
+
+[1m HTTP Status Code           [m  200 OK
+[1m HTTP clock skew              [m-9 sec from localtime
+[1m Strict Transport Security    [m[0;32m365 days[m=31536000 s[0;32m, includeSubDomains[m[0;32m, preload[m
+[1m Public Key Pinning           [m--
+[1m Server banner                [mgithub.com
+[1m Application banner           [m--
+[1m Cookie(s)                    [m3 issued: [0;32m3/3[m secure, [0;32m2/3[m HttpOnly
+[1m Security headers             [m[0;32mX-Frame-Options[m: deny
+                              [0;32mX-Content-Type-Options[m: nosniff
+                              [0;32mContent-Security-Policy[m: default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/
+                                github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com
+                                collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com
+                                github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com
+                                github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com
+                                wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com
+                                copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com
+                                proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com
+                                productionresultssa0.blob.core.windows.net productionresultssa1.blob.core.windows.net
+                                productionresultssa2.blob.core.windows.net productionresultssa3.blob.core.windows.net
+                                productionresultssa4.blob.core.windows.net productionresultssa5.blob.core.windows.net
+                                productionresultssa6.blob.core.windows.net productionresultssa7.blob.core.windows.net
+                                productionresultssa8.blob.core.windows.net productionresultssa9.blob.core.windows.net
+                                productionresultssa10.blob.core.windows.net productionresultssa11.blob.core.windows.net
+                                productionresultssa12.blob.core.windows.net productionresultssa13.blob.core.windows.net
+                                productionresultssa14.blob.core.windows.net productionresultssa15.blob.core.windows.net
+                                productionresultssa16.blob.core.windows.net productionresultssa17.blob.core.windows.net
+                                productionresultssa18.blob.core.windows.net productionresultssa19.blob.core.windows.net
+                                github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com
+                                insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com
+                                api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com edge.fullstory.com
+                                rs.fullstory.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com
+                                copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src
+                                viewscreen.githubusercontent.com notebooks.githubusercontent.com www.youtube-nocookie.com; img-src 'self' data: blob:
+                                github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com
+                                avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com
+                                objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com
+                                user-images.githubusercontent.com private-user-images.githubusercontent.com opengraph.githubassets.com
+                                marketplace-screenshots.githubusercontent.com
+                                copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/
+                                github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com
+                                objects-origin.githubusercontent.com *.githubusercontent.com images.ctfassets.net/8aevphvgewt8/; manifest-src 'self';
+                                media-src github.com user-images.githubusercontent.com secured-user-images.githubusercontent.com
+                                private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com
+                                github.githubassets.com assets.ctfassets.net/8aevphvgewt8/ videos.ctfassets.net/8aevphvgewt8/; script-src
+                                github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src
+                                github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/
+                              X-XSS-Protection: 0
+                              Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+                              Cache-Control: max-age=0, private, must-revalidate
+[1m Reverse Proxy banner         [m--
+
+
+[1m[4m Testing vulnerabilities [m
+
+[1m Heartbleed[m (CVE-2014-0160)                [1;32mnot vulnerable (OK)[m, no heartbeat extension
+[1m CCS[m (CVE-2014-0224)                       [1;32mnot vulnerable (OK)[m
+[1m Ticketbleed[m (CVE-2016-9244), experiment.  [1;32mnot vulnerable (OK)[m, no session ticket extension
+[1m Opossum[m (CVE-2025-49812)                  [0;32mnot vulnerable (OK)[m
+[1m ROBOT                                     [m[1;32mnot vulnerable (OK)[m
+[1m Secure Renegotiation (RFC 5746)           [m[1;32msupported (OK)[m
+[1m Secure Client-Initiated Renegotiation     [m[0;32mnot vulnerable (OK)[m
+[1m CRIME, TLS [m(CVE-2012-4929)                [0;32mnot vulnerable (OK)[m
+[1m BREACH[m (CVE-2013-3587)                    [0;33mpotentially NOT ok, "gzip" HTTP compression detected.[m - only supplied "/" tested
+                                           Can be ignored for static pages or if no secrets in the page
+[1m POODLE, SSL[m (CVE-2014-3566)               [1;32mnot vulnerable (OK)[m, no SSLv3 support
+[1m TLS_FALLBACK_SCSV[m (RFC 7507)              [0;32mNo fallback possible (OK)[m, no protocol below TLS 1.2 offered
+[1m SWEET32[m (CVE-2016-2183, CVE-2016-6329)    [1;32mnot vulnerable (OK)[m
+[1m FREAK[m (CVE-2015-0204)                     [1;32mnot vulnerable (OK)[m
+[1m DROWN[m (CVE-2016-0800, CVE-2016-0703)      [1;32mnot vulnerable on this host and port (OK)[m
+                                           make sure you don't use this certificate elsewhere with SSLv2 enabled services, see
+                                           https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=728D2D3ADF47AF04D618483A89BB22DB0EF3C0FAF53E976BDF60FBB36CB6D3F1
+[1m LOGJAM[m (CVE-2015-4000), experimental      [0;32mnot vulnerable (OK):[m no DH EXPORT ciphers, no DH key detected with <= TLS 1.2
+[1m BEAST[m (CVE-2011-3389)                     [0;32mnot vulnerable (OK)[m, no SSL3 or TLS1
+[1m LUCKY13[m (CVE-2013-0169), experimental     potentially [1;33mVULNERABLE[m, uses cipher block chaining (CBC) ciphers with TLS. Check patches
+[1m Winshock[m (CVE-2014-6321), experimental    [1;32mnot vulnerable (OK)[m
+[1m RC4[m (CVE-2013-2566, CVE-2015-2808)        [0;32mno RC4 ciphers detected (OK)[m
+
+
+[1m[4m Running client simulations [m[1m[4m(HTTP) [m[1m[4mvia sockets [m
+
+ Browser                      Protocol  Cipher Suite Name (OpenSSL)       Forward Secrecy
+------------------------------------------------------------------------------------------------
+ Android 7.0 (native)         TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     [0;32m256 bit ECDH (P-256)[m
+ Android 8.1 (native)         TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     [0;32m253 bit ECDH (X25519)[m
+ Android 9.0 (native)         TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Android 10.0 (native)        TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Android 11/12 (native)       TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Android 13/14 (native)       TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Android 15 (native)          TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Chrome 101 (Win 10)          TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Chromium 137 (Win 11)        TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Firefox 100 (Win 10)         TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Firefox 137 (Win 11)         TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ IE 8 Win 7                   No connection
+ IE 11 Win 7                  TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win 8.1                TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win Phone 8.1          TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     [0;32m256 bit ECDH (P-256)[m
+ IE 11 Win 10                 TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     [0;32m256 bit ECDH (P-256)[m
+ Edge 15 Win 10               TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     [0;32m253 bit ECDH (X25519)[m
+ Edge 101 Win 10 21H2         TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Edge 133 Win 11 23H2         TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Safari 18.4 (iOS 18.4)       TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Safari 15.4 (macOS 12.3.1)   TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Safari 18.4 (macOS 15.4)     TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Java 7u25                    No connection
+ Java 8u442 (OpenJDK)         TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Java 11.0.2 (OpenJDK)        TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m256 bit ECDH (P-256)[m
+ Java 17.0.3 (OpenJDK)        TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Java 21.0.6 (OpenJDK)        TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ go 1.17.8                    TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ LibreSSL 3.3.6 (macOS)       TLSv1.3   TLS_CHACHA20_POLY1305_SHA256      [0;32m253 bit ECDH (X25519)[m
+ OpenSSL 1.0.2e               TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     [0;32m256 bit ECDH (P-256)[m
+ OpenSSL 1.1.1d (Debian)      TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ OpenSSL 3.0.15 (Debian)      TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ OpenSSL 3.5.0 (git)          TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+ Apple Mail (16.0)            TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     [0;32m256 bit ECDH (P-256)[m
+ Thunderbird (91.9)           TLSv1.3   TLS_AES_128_GCM_SHA256            [0;32m253 bit ECDH (X25519)[m
+
+
+[1m[4m Rating (experimental) [m
+
+[1m Rating specs[m (not complete)  SSL Labs's 'SSL Server Rating Guide' (version 2009r from 2025-05-16)
+[1m Specification documentation  [mhttps://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide
+[1m Protocol Support [m(weighted)  100 (30)
+[1m Key Exchange [m    (weighted)  100 (30)
+[1m Cipher Strength [m (weighted)  90 (36)
+[1m Final Score                  [m96
+[1m Overall Grade                [m[1;32mA+[m
+
+[7m Done 2026-05-13 06:09:55 [ 225s] -->> 20.207.73.82:443 (github.com) <<--[m
+
+--------------------------------------------------------------------------------------------------------
+[1mDone testing now all IP addresses (on port 443): [m20.207.73.82
+
